@@ -29,7 +29,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36',
 }
 
-response = requests.get('https://howdyho.net/cybersecurity/private-hub-hranilishe-dlya-lyubyh-fajlov', headers=headers, cookies=cookies)
+response = requests.get(url, headers=headers, cookies=cookies)
 if response.ok:
     id = response.text.split('id="download-start"')[1].split(' data-mid="')[1].split('"')[0]
     print('wait . . .')
